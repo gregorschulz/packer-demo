@@ -1,6 +1,7 @@
 resource "aws_instance" "example" {
   ami           = "${var.AMI_ID}"
-  instance_type = "t2.micro"
+  instance_type = "t3.micro"
+  encrypted     = true
 
   # the VPC subnet
   subnet_id = "${aws_subnet.main-public-1.id}"
